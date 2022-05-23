@@ -1,10 +1,23 @@
 body {
     background: rgb(214, 211, 211);
+    font-family: Verdana;
+    max-width: 700px;
+    margin: auto;
 }
 
 
 #title, .subtitle, .post_title {
     color: rgb(21, 21, 26)
+}
+
+#title {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: line-through;
+    color: #505050
 }
 
 .post_title{
@@ -18,7 +31,7 @@ body {
     width: 680px;
     background: #fff;
     padding: 15px;
-    border: 3px solid rgb(32, 31, 31);
+    border: 3px solid #505050;
     margin-bottom: 15px;
     border-radius: 10px;
 }
@@ -26,9 +39,21 @@ body {
 .post_content {
     margin: 0;
     margin-bottom: 15px;
+    text-align: justify;
 }
 
 .post_image {
+    width: 100%;
     margin-bottom: 15px;
     border-radius: 10px;
+}
+
+.contact_list {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.contact_list li a {
+    color: blue;
+    text-decoration: none;
 }

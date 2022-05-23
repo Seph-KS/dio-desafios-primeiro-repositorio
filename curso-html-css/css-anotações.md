@@ -73,3 +73,45 @@ E a última propriedade é o border-radius, ele permite arredondar os cantos de 
 ![](./imagens/border-radius.png)   
 
 Colocando apenas um valor mudamos todos os cantos do elemento, mas seguindo aquela mesma ordem que vimos no padding e margin - topo, direita, inferior e esquerda -  conseguimos alterar cada canto separadamente.
+
+## Estilizando textos
+Já sabemos que podemos mudar cor e tamanho de algumas fontes, e agora vamos nos aprofundar nisso.
+
+ 
+
+### font-family
+Com o font-family podemos alterar a fonte dos nossos textos, como uma fonte da internet ou uma que esteja instalada no nosso computador, mas vamos nos ater às fontes seguras, chamadas de web safe fonts.
+
+Essas fontes são chamadas assim pois são encontradas em quases todos os sistemas e podem ser usadas sem preocupação.
+
+ 
+
+### font-size
+O font-size nos ajuda a mudar o tamanho do texto, existem algumas unidades de medida para ele mas por enquanto os pixels são suficientes para nós.
+
+ 
+
+### font-style
+Usamos o font-style para tornar um texto itálico, na maioria das vezes você usará apenas o valor italic para ele, mas se precisar tirar o itálico de um texto você pode usar o valor normal.
+
+## Estilizando Listas 
+Usamos list-style-type para mudar os marcadores de listas.   
+
+![](./imagens/list-style.png)   
+
+Pode-se também usar imagens como marcadores de listas.   
+
+![](./imagens/list-style-image.png)
+
+
+## Dimensão e alinhamento
+
+Widht: Limita o elemento em uma largura fixa     
+Height: Limita o elemento em uma altura fixa   
+
+Max-widht: Define uma largura máxima ao elemento, qual se ajustará conforme o necessário dentro da largura definida.   
+Max-height:Define uma altura máxima ao elemento, qual se ajustará conforme o necessário dentro da altura definida.    
+
+Margin: Serve para colocar espaçamento entre elementos, usando o valor Auto conseguimos alinhar elementos de forma automática.   
+
+Text align: Serve para alinha textos podendo usar os valores left, right, center e justify.
