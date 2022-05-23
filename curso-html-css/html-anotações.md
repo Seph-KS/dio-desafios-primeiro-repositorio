@@ -2,12 +2,12 @@
 
 ## Elemento HTML
 
-![](/imagens/elemento-html.png)   
+![](./imagens/elemento-html.png)   
 
 Elementos são a base do HTML.   
 
 Estrutura básica    
-![](/imagens/estrutura-basica.png)   
+![](./imagens/estrutura-basica.png)   
 
 #### !DOCTYPE 
     A primeira linha do documento, apesar de parecer um elemento HTML ela apenas diz ao navegador que ele está lidando com um arquivo do tipo HTML5. Os elementos HTML vem logo abaixo.   
