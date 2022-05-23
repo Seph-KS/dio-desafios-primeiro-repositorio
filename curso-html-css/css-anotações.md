@@ -35,13 +35,13 @@ Quando estamos criando o layout de um site o navegador representa cada elemento 
 
 Podemos usar o  padding e o margin da forma mais básica, com apenas um valor, mas eles são mais poderosos que isso. Se quisermos atribuir tamanhos diferentes para cada lado do box nós podemos, e vamos ver três formas de fazer isso.
 
-A primeira é colocando um valor para as partes superior e inferior e depois para os lados esquerdo e direito.   
+A primeira é colocando um valor para as partes superior e inferior e depois para os lados esquerdo e direito.      
 ![](./imagens/padding-01.png)   
 
-A segunda forma é dando valores para cada lado do box.
+A segunda forma é dando valores para cada lado do box.   
 ![](./imagens/padding-02.png)   
 
-A terceira forma é com as propriedades específicas para cada lado.
+A terceira forma é com as propriedades específicas para cada lado.   
 ![](./imagens/padding-03.png)   
 
 ### Background
