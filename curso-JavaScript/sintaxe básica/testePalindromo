@@ -1,0 +1,14 @@
+let frase = "roma me tem amor";
+
+function detectorDePalindromo (texto) {
+    let string = texto.toLowerCase().normalize("NFD").replace(/[^a-zA-Z ]/g, "");
+    let fraseLimpa = string.replace(/\s+/g, '');
+    let resultado = string.split("").reverse().join("");
+    let resultadoLimpo = resultado.replace(/\s+/g, '');
+    
+    if (fraseLimpa === resultadoLimpo)
+        return console.log(`${texto} é um palíndromo!`);
+    return console.log(`${texto} não é um palíndromo!`);
+}
+
+detectorDePalindromo(frase)

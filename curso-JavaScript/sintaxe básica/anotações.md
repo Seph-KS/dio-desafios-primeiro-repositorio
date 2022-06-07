@@ -222,3 +222,140 @@ São funções de expressãoo de sintaxe curta. Arrow function sempre serão an�
     Ex1: var funcao = () => {
         instrucao;
     }
+
+### Parâmetros
+
+#### Valores padrão
+Podemos definir um valor padrão para quando um ou mais parâmetros não forem declarados. 
+
+    Ex: function exponencial(array, num= 1) {
+        const result = [];
+
+        for(let i - 0; i < array.lenght; i++) {
+            result.push(array[i] ** num);
+        }
+
+        return result;
+    }
+
+#### Objeto "arguments"
+É um array com todos os parâmetros passados quando a função foi invocada.
+
+    Ex: function findMax() {
+        let max = -Infinity;
+
+        for(let i = 0; i < arguments.length; i++) {
+            if (arguments[i] > max) {
+                max = arguments[i];
+            }
+        }
+
+        return max;
+    }
+
+#### Spread
+Quando quisermos usar elementos separados de um array como parâmetros, devemos usar Spread adicionado (...) ao chamar a função.
+
+    Ex: function sum(x, y, z) {
+        return x + y + z;
+    } 
+
+    const numbers = [1, 2, 3];
+
+    console.log(sum(...numbers));
+
+#### Rest
+Rest faz exatamente o oposto de Spread, combinando elementos separados em um array. Usando (args...) ao declarar a função.
+
+    Ex: function confereTamanho(...args) {
+        console.log(args.lenght)
+    }
+
+    confereTamanho() // 0
+    confereTamanho(1, 2) // 2
+    confereTamanho(3, 4, 5) // 3
+
+### This
+A palavra reservada this é uma referência de contexto.
+No exemplo, this refere-se ao objeto pessoa.
+
+    Ex: const pessoa = {
+        firstName: "André",
+        lastName : "Soares",
+        id       : 1,
+        fullName: function() {
+            return this.firstName + " " + this.lastName;
+        },
+        getId: function() {
+            return this.id;
+        }
+    };
+
+    pessoa.fullName();
+    // "André Soares"
+
+    pessoa.getId();
+    // 1
+
+#### Manipular This
+
+##### Call
+Serve de referência para this
+
+    Ex: const pessoa = {
+        nome: "Miguel",
+    }
+        const animal = {
+            nome: 'Murphy',
+        };
+
+        function getSomething() {
+            console.log(this.nome);
+        }
+
+        getSomething.call(pessoa);
+        // Miguel
+        getSomething.call(animal);
+        // Murphy
+
+É possível passar parâmetros para uma função separando-os por vírgulas.
+
+    Ex: const myObj = {
+        num1: 2,
+        num2: 4,
+    };
+
+    function soma(a, b) {
+        console.log(this.num1 + this.num2 + a + b);
+    }
+
+    soma.call(myObj, 1, 5);
+    // 12
+
+#### Apply
+Tem a mesma funcionalidade do call, porém devemos passar os parêtros dentro de um array [].
+    
+    Ex: const myObj = {
+        num1: 2,
+        num2: 4,
+    };
+
+    function soma(a, b) {
+        console.log(this.num1 + this.num2 + a + b);
+    }
+
+    soma.call(myObj, [1, 5]);
+    // 12
+
+#### Bind
+Clona a estrutura da função onde é chamada e aplica o valor do  objeto passado como parâmetro.
+
+    const retornaNomes = function () {
+        return this.nome;
+    };
+
+    let bruno = retornaNomes.bind({ nome: 'Bruno' });
+
+    bruno();
+    // Bruno
+
